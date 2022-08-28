@@ -25,16 +25,35 @@ searchBtn.addEventListener("click", function (name) {
       let showDetails=document.querySelector(".show_details");
     
       showDetails.addEventListener("click",function(){
-        
+        main.style.display="none" 
 
         fetch(` https://api.tvmaze.com/shows/1?embed[]=seasons&embed[]=cast`)
         .then((res) => res.json())
         .then((data) => {
           console.log(showDetails);
 
+
           
-        let finalresult=`<div class="DetailsDiv">
-        `
+        let finalresult=`<div class="new_div">
+        <div class="img_content">
+          <div>
+            <img src="" alt="" />
+          </div>
+          <div>
+            <h1>Name</h1>
+            <p>Generes</p>
+            <p>language</p>
+            <p>status</p>
+          </div>
+        </div>
+        <div>
+          <h2>Summary</h2>
+          <p>para</p>
+          <h2>Seasons</h2>
+        </div>
+      </div>`
+
+
       });
 
     })  
